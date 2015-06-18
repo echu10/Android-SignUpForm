@@ -1,22 +1,100 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:padding="16dp"
     tools:context=".LoginActivity">
 
-    <Button
-        android:layout_weight="50"
-        android:text="@string/ok"
-        android:textSize="32sp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:layout_weight="50"
-        android:text="@string/cancel"
-        android:textSize="32sp"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/fields"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-</LinearLayout>
+        android:orientation="vertical">
+
+        <!-- Username text and input field -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/usernameLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:text="@string/username" />
+
+            <EditText
+                android:id="@+id/usernameInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="75"
+                android:hint="@string/usernameHint" />
+        </LinearLayout>
+
+        <!-- Password text and input field -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/passwordLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:text="@string/password" />
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="75"
+                android:hint="@string/passwordHint" />
+        </LinearLayout>
+
+        <!-- Password confirmation text and input field -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/confirmationLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:text="@string/confirmation" />
+
+            <EditText
+                android:id="@+id/confirmationInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="75"
+                android:hint="@string/confirmationHint" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- Form submit button -->
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/fields"
+        android:layout_below="@id/fields"
+        android:text="@string/submit" />
+    <!--<Button-->
+    <!--android:id="@+id/ok_button"-->
+    <!--android:layout_below="@id/cancel_button"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:text="@string/ok"-->
+    <!--android:textSize="32sp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/cancel_button"-->
+    <!--android:text="@string/cancel"-->
+    <!--android:textSize="32sp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--/>-->
+</RelativeLayout>
